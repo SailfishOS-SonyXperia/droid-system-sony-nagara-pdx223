@@ -1,0 +1,3 @@
+[submodule "droid-system-device"]
+	path = droid-system-device
+	url = ./droid-system-device/
