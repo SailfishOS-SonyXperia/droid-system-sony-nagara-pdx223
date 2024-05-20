@@ -194,8 +194,8 @@
 [ -e /system/bin/wm ] && chown 0:2000 /system/bin/wm ||:
 [ -e /system/bin/xml2abx ] && chown 0:2000 /system/bin/xml2abx ||:
 [ -e /system/bin/ziptool ] && chown 0:2000 /system/bin/ziptool ||:
-[ -e /system/./bin/run-as ] && setcap  /system/./bin/run-as
-[ -e /system/./bin/simpleperf_app_runner ] && setcap  /system/./bin/simpleperf_app_runner
+[ -e /system/./bin/run-as ] && setcap cap_setgid,cap_setuid+ep /system/./bin/run-as ||:
+[ -e /system/./bin/simpleperf_app_runner ] && setcap cap_setgid,cap_setuid+ep /system/./bin/simpleperf_app_runner ||:
 [ -e /vendor/app ] && chown 0:2000 /vendor/app ||:
 [ -e /vendor/app/QcRilAm ] && chown 0:2000 /vendor/app/QcRilAm ||:
 [ -e /vendor/bin ] && chown 0:2000 /vendor/bin ||:
